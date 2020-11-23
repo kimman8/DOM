@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="../base.css" />
+  </head>
+
+  <body>
+    <script>
+      // function outer() {
+      //   const outerVar = 'hey i am the outer var!';
+      //   function inner() {
+      //     const innerVar = 'hey i am the inner var!';
+      //     console.log(innerVar);
+      //     console.log(outerVar);
+      //   }
+      //   return inner;
+      // }
+
+      // const innerFn = outer();
+      function createGreeting(greeting = '') {
+        const myGreet = greeting.toUpperCase();
+        return function (name) {
+          return `${myGreet} ${name}`;
+        };
+      }
+      const heyz = createGreeting('heyz');
+      const hello = createGreeting('hello');
+
+      function createGame(gameName) {
+        let score = 0;
+        return function win() {
+          score++;
+          return `Your name ${gameName} score is ${score}.`;
+        };
+      }
+      const tic = createGame('tic');
+      const soccer = createGame('soccer');
+    </script>
+  </body>
+</html>
