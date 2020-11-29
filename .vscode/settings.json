@@ -18,3 +18,16 @@
     "javascript",
     "javascriptreact"
 ],
+
+[
+    {
+      "key": "cmd+alt+e",
+      "command": "mithrilEmmet.expand",
+      "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+alt+e",
+      "command": "mithrilEmmet.expand",
+      "when": "editorFocus"
+    }
+  ]
